@@ -1,0 +1,112 @@
+Prédicteur de Maladie Cardiaque / أداة التنبؤ بأمراض القلب
+
+## Description / وصف
+
+Ce projet est une application de bureau développée en Python à l'aide de la bibliothèque Tkinter pour l'interface utilisateur. Elle permet de prédire le risque de maladie cardiaque chez un patient en se basant sur un ensemble de caractéristiques médicales. Le modèle de prédiction utilisé est un classifieur XGBoost pré-entraîné, chargé à partir d'un fichier JSON (`heart_disease_xgboost_model.json`).
+
+يهدف هذا المشروع إلى توفير تطبيق مكتبي تم تطويره باستخدام لغة Python ومكتبة Tkinter لإنشاء واجهة مستخدم رسومية. يقوم التطبيق بالتنبؤ بمخاطر الإصابة بأمراض القلب لدى المريض بناءً على مجموعة من الخصائص الطبية. يعتمد نموذج التنبؤ المستخدم على مصنف XGBoost تم تدريبه مسبقًا، ويتم تحميله من ملف JSON (`heart_disease_xgboost_model.json`).
+
+## Fonctionnalités / المميزات
+
+* **Interface Utilisateur Intuitive:** Interface graphique conviviale pour saisir les informations du patient.
+  * واجهة مستخدم رسومية سهلة الاستخدام لإدخال معلومات المريض.
+
+* **Prédiction Basée sur XGBoost:** Utilise un modèle XGBoost pré-entraîné pour effectuer la prédiction du risque de maladie cardiaque.
+  * يستخدم نموذج XGBoost تم تدريبه مسبقًا لإجراء التنبؤ بمخاطر الإصابة بأمراض القلب.
+
+* **Affichage du Résultat et de la Probabilité:** Affiche le résultat de la prédiction (présence ou absence de maladie cardiaque) ainsi que la probabilité associée.
+  * عرض نتيجة التنبؤ (وجود أو عدم وجود مرض قلبي) بالإضافة إلى الاحتمالية المرتبطة بها.
+
+* **Gestion des Erreurs:** Gère les erreurs de chargement du modèle et les erreurs de saisie de l'utilisateur.
+  * التعامل مع أخطاء تحميل النموذج وأخطاء إدخال المستخدم.
+
+* **Support Multilingue (Français/Arabe):** L'interface utilisateur prend en charge les langues française et arabe, permettant aux utilisateurs de choisir leur langue préférée.
+  * دعم متعدد اللغات (الفرنسية/العربية): تدعم واجهة المستخدم اللغتين الفرنسية والعربية، مما يتيح للمستخدمين اختيار لغتهم المفضلة.
+
+## Paramètres médicaux / المعلمات الطبية
+
+L'application permet de saisir les caractéristiques médicales suivantes:
+
+* Âge / العمر
+* Sexe / الجنس
+* Type de douleur thoracique / نوع ألم الصدر
+* Pression artérielle au repos (mmHg) / ضغط الدم في وضع الراحة (ملم زئبق)
+* Cholestérol sérique (mg/dl) / الكوليسترول في الدم (ملغ/ديسيلتر)
+* Sucre sanguin à jeun > 120 mg/dl / سكر الدم الصيامي > 120 ملغ/ديسيلتر
+* Résultat ECG au repos / نتيجة تخطيط القلب الكهربائي في الراحة
+* Fréquence cardiaque maximale / أقصى معدل لضربات القلب
+* Angine induite par l'exercice / ذبحة صدرية ناتجة عن التمرين
+* Oldpeak (dépression ST) / انخفاض قطعة ST
+* Pente segment ST / منحدر قطعة ST
+* Nombre de vaisseaux colorés (0-3) / عدد الأوعية الدموية الملونة (0-3)
+* Thal / فحص الثاليوم
+
+## Capture d'écran / لقطة شاشة
+
+![Interface de l'application / واجهة التطبيق](screenshot.png)
+*Note: Remplacez 'screenshot.png' par une capture d'écran réelle de votre application.*
+
+## Installation / التثبيت
+
+### Prérequis / المتطلبات الأساسية
+
+* Python 3.x installé sur votre système. / تثبيت Python 3.x على نظامك.
+* Les bibliothèques suivantes doivent être installées / يجب تثبيت المكتبات التالية:
+  * `tkinter` (devrait être inclus avec l'installation de Python)
+  * `pandas`
+  * `numpy`
+  * `scikit-learn`
+  * `xgboost`
+
+### Installation des bibliothèques / تثبيت المكتبات
+
+```bash
+pip install pandas numpy scikit-learn xgboost
+```
+
+### Fichier de modèle / ملف النموذج
+
+Assurez-vous d'avoir le fichier de modèle pré-entraîné `heart_disease_xgboost_model.json` dans le même répertoire que le script Python.
+
+تأكد من وجود ملف النموذج المدرب مسبقًا `heart_disease_xgboost_model.json` في نفس دليل ملف Python.
+
+## Utilisation / الاستخدام
+
+1. Exécutez le script Python :
+   ```bash
+   python heart_disease_predictor.py
+   ```
+   (Remplacez `heart_disease_predictor.py` par le nom de votre fichier Python).
+   
+   (استبدل `heart_disease_predictor.py` باسم ملف Python الخاص بك).
+
+2. L'interface graphique s'ouvrira. Saisissez les informations du patient dans les champs correspondants.
+   
+   ستفتح واجهة المستخدم الرسومية. أدخل معلومات المريض في الحقول المناسبة.
+
+3. Sélectionnez la langue de votre choix en utilisant le menu déroulant en haut à gauche.
+   
+   حدد اللغة التي تختارها باستخدام القائمة المنسدلة في الزاوية العلوية اليسرى.
+
+4. Cliquez sur le bouton "Prédire" / "تنبؤ" pour obtenir le résultat de la prédiction.
+   
+   انقر على زر "Prédire" / "تنبؤ" للحصول على نتيجة التنبؤ.
+
+5. Le résultat (Maladie cardiaque détectée / تم اكتشاف مرض القلب ou Pas de maladie cardiaque / لا يوجد مرض قلبي) et la probabilité seront affichés en bas de l'interface.
+   
+   سيتم عرض النتيجة (مرض قلبي مكتشف أو لا يوجد مرض قلبي) والاحتمالية في الجزء السفلي من الواجهة.
+
+## Notes / ملاحظات
+
+* La précision de la prédiction dépend de la qualité et de la représentativité des données utilisées pour entraîner le modèle XGBoost.
+  
+  تعتمد دقة التنبؤ على جودة وتمثيلية البيانات المستخدمة لتدريب نموذج XGBoost.
+
+* Cette application est à des fins de démonstration et d'éducation uniquement et ne doit pas être utilisée pour des diagnostics médicaux réels sans l'avis d'un professionnel de la santé.
+  
+  هذا التطبيق مخصص لأغراض العرض والتوضيح التعليمي فقط ولا ينبغي استخدامه للتشخيصات الطبية الحقيقية دون استشارة أخصائي الرعاية الصحية.
+
+## Auteur / المؤلف
+
+[Mouad benyaya]
+
