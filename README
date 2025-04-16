@@ -41,10 +41,6 @@ L'application permet de saisir les caractéristiques médicales suivantes:
 * Nombre de vaisseaux colorés (0-3) / عدد الأوعية الدموية الملونة (0-3)
 * Thal / فحص الثاليوم
 
-## Capture d'écran / لقطة شاشة
-
-![Interface de l'application / واجهة التطبيق](screenshot.png)
-*Note: Remplacez 'screenshot.png' par une capture d'écran réelle de votre application.*
 
 ## Installation / التثبيت
 
@@ -76,9 +72,9 @@ Assurez-vous d'avoir le fichier de modèle pré-entraîné `heart_disease_xgboos
    ```bash
    python heart_disease_predictor.py
    ```
-   (Remplacez `heart_disease_predictor.py` par le nom de votre fichier Python).
+   (Remplacez `python Ml-h.py` par le nom de votre fichier Python).
    
-   (استبدل `heart_disease_predictor.py` باسم ملف Python الخاص بك).
+   (استبدل `python Ml-h.py` باسم ملف Python الخاص بك).
 
 2. L'interface graphique s'ouvrira. Saisissez les informations du patient dans les champs correspondants.
    
