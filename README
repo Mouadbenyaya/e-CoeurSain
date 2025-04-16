@@ -70,7 +70,7 @@ Assurez-vous d'avoir le fichier de modèle pré-entraîné `heart_disease_xgboos
 
 1. Exécutez le script Python :
    ```bash
-   python heart_disease_predictor.py
+   python Ml-h.py
    ```
    (Remplacez `python Ml-h.py` par le nom de votre fichier Python).
    
